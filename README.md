@@ -1,1 +1,1 @@
-https://pavelzelencow.github.io/game
+https://pavelzelencow.github.io/game/
