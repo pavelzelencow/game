@@ -1,0 +1,224 @@
+/*
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    padding: 10px;
+    color: #fff;
+    background-color: #2ecc71;
+    width: 240px;
+    font-size: 32px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+
+
+.screen {
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#load {
+    width: 100%;
+    font-size: 36px;
+    text-align: center;
+}
+
+#load.screen {
+    animation: fadeIn 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+} */
+
+* *,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body {
+    color: #000;
+    background-color: #000;
+    font-family: 'Space Mono', monospace;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 90px;
+    line-height: 9vh;
+    text-align: center;
+    color: white;
+}
+
+h1 span {
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 693px;
+    height: 357px;
+    color: white;
+}
+
+.form {
+    text-align: center;
+}
+
+.content_nickname {
+    font-size: 48px;
+}
+
+.content_userName {
+    font: bold 2rem 'Space Mono', monospace;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.8);
+    text-shadow: 0 0.08em 0 rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    padding: 0.4em 1em 0.5em;
+    border-radius: 0.3em;
+    border: 2px solid;
+    border-color: color(var(--btnColor) shade(20%)) color(var(--btnColor) shade(30%)) color(var(--btnColor) shade(40%));
+    background-color: var(--btnColor);
+    background-image: linear-gradient(var(--btnColor), color(var(--btnColor) shade(10%)));
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.3), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    transition: all 100ms;
+    margin-bottom: 15px;
+}
+
+.content_userName::placeholder {
+    color: rgba(250, 250, 250, 0.8);
+}
+
+.content_userName:hover {
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4), 0 0.1em 0.2em rgba(0, 0, 0, 0.4), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+}
+
+.content_btnPlay,
+.gameBtnsNew {
+    font: bold 2rem 'Space Mono', monospace;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.8);
+    text-shadow: 0 0.08em 0 rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    padding: 0.4em 1em 0.5em;
+    border-radius: 0.3em;
+    border: 2px solid;
+    border-color: color(var(--btnColor) shade(20%)) color(var(--btnColor) shade(30%)) color(var(--btnColor) shade(40%));
+    background-color: var(--btnColor);
+    background-image: linear-gradient(var(--btnColor), color(var(--btnColor) shade(10%)));
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.3), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    transition: all 100ms;
+}
+
+.content_btnPlay:hover,
+.gameBtnsNew:hover,
+.content_btnPlay:focus,
+.gameBtnsNew:focus {
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4), 0 0.1em 0.2em rgba(0, 0, 0, 0.4), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+}
+
+.content_btnPlay:active,
+.gameBtnsNew:active {
+    border-color: color(var(--btnColor) shade(30%)) color(var(--btnColor) shade(20%)) var(--btnColor);
+    background-image: linear-gradient(color(var(--btnColor) shade(5%)), var(--btnColor));
+    box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1) inset, 0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset, 0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset, -0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset;
+    transition-duration: 10ms;
+}
+
+
+footer {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 760px) {
+    h1 {
+        font-size: 32px;
+        line-height: 9vh;
+        text-align: center;
+    }
+
+    .content_nickname {
+        font-size: 36px;
+    }
+
+    .content_userName {
+        font-size: 30px;
+        width: 75%;
+    }
+
+    .content_btnPlay {
+        font-size: 30px;
+        padding: 1% 13%;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    h1 {
+        font-size: 28px;
+        line-height: 9vh;
+        text-align: center;
+    }
+
+    .content_nickname {
+        font-size: 27px;
+    }
+
+    .content_userName {
+        font-size: 26px;
+        width: 90%;
+    }
+
+    .content_btnPlay {
+        font-size: 26px;
+        padding: 1% 13%;
+    }
+}
